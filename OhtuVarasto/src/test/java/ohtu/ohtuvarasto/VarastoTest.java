@@ -81,6 +81,13 @@ public class VarastoTest {
     }
 
     @Test
+    public void otetaanEnemmanKuinVarastossaOn() {
+        varasto.lisaaVarastoon(5);
+        double otettu = varasto.otaVarastosta(6);
+        assertEquals(5, otettu, vertailuTarkkuus);
+    }
+
+    @Test
     public void konstr() {
         varasto = new Varasto(-1);
         varasto = new Varasto(0);
