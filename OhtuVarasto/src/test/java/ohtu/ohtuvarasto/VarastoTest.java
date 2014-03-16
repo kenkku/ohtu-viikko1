@@ -73,6 +73,14 @@ public class VarastoTest {
     }
 
     @Test
+    public void alleNollanOttaminenEiVaikuta() {
+        varasto.lisaaVarastoon(5);
+        varasto.otaVarastosta(-1);
+
+        assertEquals(5, varasto.getSaldo(), vertailuTarkkuus);
+    }
+
+    @Test
     public void konstr() {
         varasto = new Varasto(-1);
         varasto = new Varasto(0);
